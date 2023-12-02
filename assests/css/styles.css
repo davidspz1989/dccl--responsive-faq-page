@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;700;800&display=swap');
+
+:root{
+    /* font */
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    --font-size-header: 3rem;
+    --font-size-label: 1.25rem;
+    --font-size-body: 1rem;
+    --font-size-button__text: 0.875rem;
+    /* color */
+    --body-background-color: #12111F;
+    --color-font-active: #F2F5F9;
+    --color-font-inactive: #97A3B6;
+    --color-font-button-text: #CDD5E0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--body-background-color);
+    font-size: 16px;
+    font-family: var(--font-body);
+    color: var(--color-font-inactive);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    margin-bottom: 76px;
+}
+
+/* NOTA DE COMO USAR url*/
+header{
+    background-image: url('../img/faq-title-bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 72px;
+    margin-bottom: 96px;
+    height: 200px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    border: 0;
+}
+
+@media only screen and (width <= 1024px){
+    header{
+        width: 70%;
+    }
+}
+
+@media only screen and (width <= 769px) {
+    header {
+        width: 80%; 
+    }
+}
+
+@media only screen and (width <= 420px) {
+    header {
+        width: 90%;
+        margin-top: -10px;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (width <= 360px) {
+    header {
+        width: 100%;
+        margin-top: -10px;
+        margin-bottom: 25px;
+    }
+}
+
+
+.text__element--title{
+    font-size: var(--font-size-header);
+    font-weight: 500;
+    opacity: 0.5;
+    min-width: 65%;
+    max-width: 65%;
+}
+
+@media only screen and (width <= 769px) {
+    .text__element--title {
+        font-size: 2.6rem;
+    }
+}
+
+@media only screen and (width <= 420px) {
+    .text__element--title {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (width <= 360px) {
+    .text__element--title {
+        font-size: 1.5rem;
+    }
+}
+
+.text__element{
+    text-align: center;
+}
+
+.text__element p:first-child{
+    color: var(--color-font-active);
+    font-size: var(--font-size-label);
+    margin-bottom: 16px;
+}
+
+.text__element p:last-child{
+    color: var(--color-font-inactive);
+    margin-bottom: 40px;
+}
+
+@media only screen and (width <= 420px) {
+    .text__element p:first-child {
+        font-size: 0.8rem;
+    }
+    .text__element p:last-child {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (width <= 360px) {
+    .text__element p:first-child {
+        font-size: 0.7rem;
+    }
+    .text__element p:last-child {
+        font-size: 0.54rem;
+    }
+}
+
+button{
+    border: 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 8px 20px;
+    background-color: var(--body-background-color);
+    color: var(--color-font-button-text);
+    margin-left: 24px;
+    font-size: var(--font-size-button__text);
+}
+
+@media only screen and (width <= 420px) {
+    .main__element--button button:first-child {
+        margin-left: 0;
+    }
+
+    .main__element--button button:last-child {
+        margin-left: -24px;
+    }
+
+    button {
+        font-size: 0.68rem;
+        padding: 6px 15px;
+    }
+}
+
+@media only screen and (width <= 360px) {
+    button {
+        font-size: 0.6rem;
+        padding: 6px 15px;
+    }
+}
+
+button:hover{
+    background-color: #2b2a36ff;
+    cursor: pointer;
+}
+
+.main__element--wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__element--button{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    margin-left: 24px;
+}
+
+@media only screen and (width <= 420px) {
+    .main__element--button {
+        width: 380px;
+        height: 90px;
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (width <= 360px) {
+    .main__element--button {
+        width: 340px;
+        margin-left: 0;
+        margin-bottom: 35px;
+    }
+}
+
+.main__element--accordion{
+    flex-direction: column;
+    align-items: normal;
+    width: 810px;
+    overflow: hidden;
+}
+
+@media only screen and (width <= 769px) {
+    .main__element--accordion {
+        width: 700px;
+    }
+}
+
+@media only screen and (width <= 420px) {
+    .main__element--accordion {
+        width: 380px;
+    }
+}
+
+@media only screen and (width <= 360px) {
+    .main__element--accordion{
+        width: 340px;
+    }
+}
+
+
+
+details{
+    margin-bottom: 20px;
+    padding: 0 32px;
+    border-radius: 10px;
+}
+
+@media only screen and (width <= 420px) {
+    details {
+        padding: 0 20px;
+    }
+} 
+
+summary{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+@media only screen and (width <= 420px) {
+    summary {
+        font-size: 0.875rem;
+    }
+
+    details div {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (width <= 360px) {
+    summary {
+        font-size: 0.68rem;
+    }
+
+    details div {
+        font-size: 0.58rem;
+    }
+}
+
+/* open <details> accordion*/
+details[open]{
+    padding-top: 28px;
+    padding-bottom: 28px; 
+    background-color: #2b2a36ff;
+    transition: 0.2s linear;
+}
+
+@media only screen and (width <= 420px) {
+    details[open] {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+details[open] summary{
+    color: var(--color-font-button-text);
+    font-size: var(--font-size-label);
+}
+
+@media only screen and (width <= 420px) {
+    details[open] summary {
+        font-size: 0.98rem;
+    }
+}
+
+@media only screen and (width <= 360px) {
+    details[open] summary {
+        font-size: 0.75rem;
+    }
+}
+
+/* close <details> accordion*/
+details:not(open){
+    transition: 0.2s linear;
+}
+
+
+.icon__summary{
+    transition: transform 0.2s;
+    font-weight: 500;
+}
+
+details[open] .icon__summary{
+    transform: rotate(180deg);
+    color: var(--color-font-active);
+    font-size: var(--font-size-label);
+}
+
+@media only screen and (width <= 420px) {
+    details[open] .icon__summary {
+        font-size: 0.98rem;
+    }
+}
+
+@media only screen and (width <= 360px) {
+    details[open] .icon__summary {
+        font-size: 0.75rem;
+    }
+}
+
